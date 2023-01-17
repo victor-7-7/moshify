@@ -153,6 +153,29 @@ a {
   }
 }
 
+/* =================== Icons ==================== */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+/* Один дефис потому-что это целиком новый класс. Если бы это была
+вариация .icon-класса, то мы бы использовали 2 дефиса .icon--container */
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 
 
