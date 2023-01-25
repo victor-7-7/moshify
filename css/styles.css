@@ -814,6 +814,38 @@ elements. > - child combinator */
   margin: 0 auto;
 }
 
+/* =================== Features Block =================== */
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  /* Все четные .feature элементы (двухячеистые сетки) будут размещать
+  свой .feature__content элемент во второй ячейке (справа от картинки) */
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
+
+
+
+
+
 
 
 
