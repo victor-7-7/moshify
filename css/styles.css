@@ -20,6 +20,11 @@
 
 /* ================= Typography ==================== */
 
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
 html {
   /* 16px - default font size for all html-elements */
   /* 62.5% of 16px = 10px */
@@ -37,6 +42,7 @@ body {
 h1, h2, h3 {
   color: var(--color-headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -49,6 +55,7 @@ h2 {
 
 h3 {
   font-size: 3rem;  /* ~30px */
+  font-weight: 500;
 }
 
 p {
@@ -56,6 +63,10 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
+  body {
+    font-size: 2rem;
+  }
+
   h1 {
     font-size: 8rem;
   }
@@ -124,6 +135,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -141,7 +153,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -152,6 +163,7 @@ a {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -437,6 +449,7 @@ a {
 
 .media {
   display: flex;
+  margin-bottom: 4rem;
 }
 
 .media__title {
@@ -660,7 +673,9 @@ elements. > - child combinator */
   color: #7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
   color: #fff;
 }
 
@@ -831,7 +846,6 @@ elements. > - child combinator */
 
 .feature__image {
   width: 100%;
-  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -839,6 +853,27 @@ elements. > - child combinator */
   свой .feature__content элемент во второй ячейке (справа от картинки) */
   .feature:nth-of-type(even) .feature__content {
     order: 2;
+  }
+}
+
+/* =================== Showcase Block =================== */
+
+.block-showcase__image > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .block-showcase__image {
+    justify-self: end;
+  }
+
+  .block-showcase__image > img {
+    width: auto;
+    max-width: 700px;
   }
 }
 
