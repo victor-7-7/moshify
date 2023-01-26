@@ -223,7 +223,8 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;  /* vert  horiz */
+  /* 4vw <-- 4% от ширины вьюпорта */
+  padding: 2rem 3vw;  /* vert  horiz */
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -319,6 +320,8 @@ a {
   /* Чтобы занять всю свободную ширину и сдвинуть кнопку в правый край группы */
   flex-grow: 1;
   padding: 1.5rem 2rem;
+
+  width: 0;
 }
 
 .input-group .btn {
@@ -777,7 +780,7 @@ elements. > - child combinator */
 /* =================== Hero =================== */
 
 .hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .hero__tagline {
@@ -795,6 +798,7 @@ elements. > - child combinator */
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   }
 
   .hero__content {
@@ -813,8 +817,9 @@ elements. > - child combinator */
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
