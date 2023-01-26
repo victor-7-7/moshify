@@ -662,6 +662,7 @@ elements. > - child combinator */
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .block__heading {
@@ -681,17 +682,27 @@ elements. > - child combinator */
 
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
 }
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block--skewed-right {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
+  }
+
+  .block--skewed-left {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+  }
 }
 
 /* =================== Navigation Bar =================== */
